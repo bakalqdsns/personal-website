@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <defs>
+    <linearGradient id="arBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a10"/>
+      <stop offset="100%" stop-color="#0a0f1a"/>
+    </linearGradient>
+    <linearGradient id="arAccent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="arGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="400" height="240" fill="url(#arBg)"/>
+
+  <!-- Grid -->
+  <g stroke="#a855f7" stroke-opacity="0.06" stroke-width="1">
+    <line x1="0" y1="60" x2="400" y2="60"/>
+    <line x1="0" y1="120" x2="400" y2="120"/>
+    <line x1="0" y1="180" x2="400" y2="180"/>
+    <line x1="100" y1="0" x2="100" y2="240"/>
+    <line x1="200" y1="0" x2="200" y2="240"/>
+    <line x1="300" y1="0" x2="300" y2="240"/>
+  </g>
+
+  <!-- AR marker (book cover) -->
+  <rect x="30" y="60" width="100" height="140" rx="6" fill="#a855f7" fill-opacity="0.08" stroke="#a855f7" stroke-opacity="0.4" stroke-width="1.2"/>
+  <rect x="40" y="72" width="80" height="50" rx="3" fill="#a855f7" fill-opacity="0.12"/>
+  <rect x="40" y="128" width="55" height="5" rx="2" fill="#a855f7" fill-opacity="0.3"/>
+  <rect x="40" y="137" width="70" height="4" rx="2" fill="#a855f7" fill-opacity="0.15"/>
+  <rect x="40" y="145" width="45" height="4" rx="2" fill="#a855f7" fill-opacity="0.15"/>
+  <rect x="40" y="175" width="60" height="15" rx="3" fill="#a855f7" fill-opacity="0.2" stroke="#a855f7" stroke-opacity="0.5" stroke-width="1"/>
+  <text x="70" y="185" font-family="monospace" font-size="6" fill="#a855f7" fill-opacity="0.8" text-anchor="middle">k�</text>
+
+  <!-- Book title lines -->
+  <rect x="40" y="75" width="60" height="4" rx="2" fill="#a855f7" fill-opacity="0.3"/>
+  <rect x="40" y="83" width="45" height="3" rx="1" fill="#a855f7" fill-opacity="0.2"/>
+
+  <!-- AR camera / detection frame -->
+  <rect x="155" y="75" width="110" height="110" rx="4" fill="none" stroke="#a855f7" stroke-opacity="0.3" stroke-width="1.2" stroke-dasharray="6,3"/>
+
+  <!-- Corner brackets on AR frame -->
+  <g stroke="#a855f7" stroke-opacity="0.7" stroke-width="1.5" fill="none">
+    <polyline points="155,90 155,75 170,75"/>
+    <polyline points="250,75 265,75 265,90"/>
+    <polyline points="265,160 265,175 250,175"/>
+    <polyline points="170,175 155,175 155,160"/>
+  </g>
+
+  <!-- 3D model floating in AR frame -->
+  <g filter="url(#arGlow)">
+    <!-- 3D cube projection -->
+    <polygon points="210,100 260,85 280,115 230,130" fill="#a855f7" fill-opacity="0.15" stroke="#a855f7" stroke-opacity="0.5" stroke-width="1"/>
+    <polygon points="210,100 200,115 220,130 230,130" fill="#a855f7" fill-opacity="0.08" stroke="#a855f7" stroke-opacity="0.3" stroke-width="1"/>
+    <polygon points="230,130 280,115 270,135 220,130" fill="#a855f7" fill-opacity="0.2" stroke="#a855f7" stroke-opacity="0.6" stroke-width="1"/>
+    <circle cx="240" cy="115" r="20" fill="none" stroke="#a855f7" stroke-opacity="0.15" stroke-width="1" stroke-dasharray="3,3"/>
+    <!-- Virtual info label -->
+    <rect x="275" y="90" width="70" height="22" rx="3" fill="#a855f7" fill-opacity="0.1" stroke="#a855f7" stroke-opacity="0.4" stroke-width="1"/>
+    <rect x="282" y="96" width="40" height="4" rx="2" fill="#a855f7" fill-opacity="0.4"/>
+    <rect x="282" y="104" width="30" height="3" rx="1" fill="#a855f7" fill-opacity="0.2"/>
+  </g>
+
+  <!-- Detection dots on marker corners -->
+  <circle cx="35" cy="65" r="4" fill="#a855f7" fill-opacity="0.6"/>
+  <circle cx="125" cy="65" r="4" fill="#a855f7" fill-opacity="0.6"/>
+  <circle cx="35" cy="195" r="4" fill="#a855f7" fill-opacity="0.6"/>
+  <circle cx="125" cy="195" r="4" fill="#a855f7" fill-opacity="0.6"/>
+
+  <!-- Connecting lines from marker to AR zone -->
+  <g stroke="#a855f7" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4,3">
+    <line x1="130" y1="130" x2="155" y2="130"/>
+    <line x1="130" y1="130" x2="155" y2="115"/>
+  </g>
+
+  <!-- Glow top -->
+  <rect x="0" y="0" width="400" height="60" fill="url(#arAccent)"/>
+
+  <!-- Label -->
+  <text x="20" y="220" font-family="monospace" font-size="9" fill="#a855f7" fill-opacity="0.6" letter-spacing="2">04 � AR E-BOOK</text>
+  <text x="380" y="228" font-family="monospace" font-size="8" fill="#a855f7" fill-opacity="0.3" text-anchor="end">2025</text>
+</svg>

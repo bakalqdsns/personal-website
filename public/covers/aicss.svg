@@ -1,0 +1,408 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" width="480" height="280">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060810"/>
+      <stop offset="100%" stop-color="#0a1428"/>
+    </linearGradient>
+
+    <!-- Cyan glow -->
+    <radialGradient id="glowCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Violet glow -->
+    <radialGradient id="glowViolet" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Clip for image area -->
+    <clipPath id="imgClip">
+      <rect x="24" y="70" width="96" height="72" rx="4"/>
+    </clipPath>
+
+    <!-- Depth layer clip -->
+    <clipPath id="layerClip">
+      <rect x="136" y="70" width="96" height="72" rx="4"/>
+    </clipPath>
+
+    <!-- 3D space clip -->
+    <clipPath id="spaceClip">
+      <rect x="248" y="55" width="100" height="102" rx="4"/>
+    </clipPath>
+
+    <!-- Soft glow filter -->
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Strong glow filter -->
+    <filter id="strongGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Layer shadow -->
+    <filter id="layerShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+
+    <!-- Scan line pattern -->
+    <pattern id="scanlines" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="4" y2="0" stroke="#00f0ff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- ===== BACKGROUND ===== -->
+  <rect width="480" height="280" fill="url(#bgGrad)"/>
+
+  <!-- Ambient glow spots -->
+  <ellipse cx="72" cy="100" rx="80" ry="60" fill="url(#glowCyan)" opacity="0.6"/>
+  <ellipse cx="296" cy="105" rx="90" ry="65" fill="url(#glowViolet)" opacity="0.5"/>
+
+  <!-- Subtle grid -->
+  <g stroke="#00f0ff" stroke-opacity="0.04" stroke-width="0.5">
+    <line x1="0" y1="70" x2="480" y2="70"/>
+    <line x1="0" y1="140" x2="480" y2="140"/>
+    <line x1="0" y1="210" x2="480" y2="210"/>
+    <line x1="120" y1="0" x2="120" y2="280"/>
+    <line x1="240" y1="0" x2="240" y2="280"/>
+    <line x1="360" y1="0" x2="360" y2="280"/>
+  </g>
+
+  <!-- Scan line overlay -->
+  <rect width="480" height="280" fill="url(#scanlines)" opacity="0.5"/>
+
+  <!-- ===== SECTION: INPUT IMAGE ===== -->
+
+  <!-- Section label -->
+  <text x="72" y="58" font-family="'Courier New', monospace" font-size="8" fill="#00f0ff" fill-opacity="0.5" text-anchor="middle" letter-spacing="2">INPUT</text>
+
+  <!-- Polaroid-style frame -->
+  <rect x="22" y="68" width="100" height="80" rx="3" fill="#0e1825" stroke="#00f0ff" stroke-opacity="0.2" stroke-width="1"/>
+
+  <!-- Stylized landscape scene inside -->
+  <g clip-path="url(#imgClip)">
+    <!-- Sky gradient -->
+    <rect x="24" y="70" width="96" height="38" fill="#1a2a4a"/>
+    <!-- Horizon glow -->
+    <rect x="24" y="100" width="96" height="8" fill="#00f0ff" fill-opacity="0.08"/>
+    <!-- Sun/moon -->
+    <circle cx="92" cy="82" r="8" fill="#fbbf24" fill-opacity="0.3"/>
+    <circle cx="92" cy="82" r="4" fill="#fbbf24" fill-opacity="0.5"/>
+    <!-- Mountains background -->
+    <polygon points="24,108 50,88 76,100 100,90 120,108" fill="#2a3a5a" fill-opacity="0.8"/>
+    <!-- Mountains midground -->
+    <polygon points="24,108 44,94 64,106 84,92 104,108" fill="#3a4a6a" fill-opacity="0.9"/>
+    <!-- Hills foreground -->
+    <polygon points="24,108 36,100 48,108 60,96 72,108 84,98 96,108 108,100 120,108" fill="#1e2e4a"/>
+    <!-- Water / ground -->
+    <rect x="24" y="108" width="96" height="34" fill="#0a1428"/>
+    <!-- Water reflections -->
+    <rect x="30" y="112" width="40" height="1" fill="#00f0ff" fill-opacity="0.15"/>
+    <rect x="30" y="116" width="30" height="1" fill="#00f0ff" fill-opacity="0.1"/>
+    <rect x="30" y="120" width="50" height="1" fill="#00f0ff" fill-opacity="0.12"/>
+    <!-- Tree silhouettes -->
+    <polygon points="42,108 45,98 48,108" fill="#0a1828"/>
+    <polygon points="55,108 59,92 63,108" fill="#0a1828"/>
+    <polygon points="68,108 71,96 74,108" fill="#0a1828"/>
+    <!-- Scanline over image -->
+    <rect x="24" y="70" width="96" height="72" fill="url(#scanlines)" opacity="0.3"/>
+  </g>
+
+  <!-- Photo bottom bar -->
+  <rect x="22" y="148" width="100" height="12" fill="#0c1622"/>
+  <text x="72" y="157" font-family="'Courier New', monospace" font-size="6" fill="#00f0ff" fill-opacity="0.3" text-anchor="middle">landscape.jpg</text>
+
+  <!-- Depth scan overlay on source -->
+  <rect x="24" y="70" width="96" height="72" rx="4" fill="none" stroke="#00f0ff" stroke-opacity="0.3" stroke-width="0.8" stroke-dasharray="3,3">
+    <animate attributeName="stroke-opacity" values="0.1;0.5;0.1" dur="2s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ===== ARROW 1 ===== -->
+  <g filter="url(#softGlow)">
+    <line x1="130" y1="106" x2="158" y2="106" stroke="#00f0ff" stroke-width="1.2" stroke-opacity="0.5"/>
+    <polyline points="153,102 158,106 153,110" fill="none" stroke="#00f0ff" stroke-width="1.2" stroke-opacity="0.5"/>
+  </g>
+  <text x="144" y="98" font-family="'Courier New', monospace" font-size="6" fill="#00f0ff" fill-opacity="0.35" text-anchor="middle">parse</text>
+
+  <!-- ===== SECTION: LAYER PARSING ===== -->
+
+  <!-- Section label -->
+  <text x="184" y="58" font-family="'Courier New', monospace" font-size="8" fill="#00f0ff" fill-opacity="0.5" text-anchor="middle" letter-spacing="2">DEPTH MAP</text>
+
+  <!-- Depth map frame -->
+  <rect x="134" y="68" width="100" height="80" rx="3" fill="#080c14" stroke="#00f0ff" stroke-opacity="0.15" stroke-width="1"/>
+
+  <!-- Depth gradient visualization - grayscale depth -->
+  <g clip-path="url(#layerClip)">
+    <!-- Sky (far, dark) -->
+    <rect x="136" y="70" width="96" height="38" fill="#121a28"/>
+    <!-- Horizon (medium) -->
+    <rect x="136" y="100" width="96" height="8" fill="#1e2a40"/>
+    <!-- Ground (near, bright) -->
+    <rect x="136" y="108" width="96" height="30" fill="#2a3850"/>
+    <!-- Depth gradient overlay -->
+    <rect x="136" y="70" width="96" height="72" fill="url(#scanlines)" opacity="0.4"/>
+
+    <!-- Depth contours / isolines -->
+    <line x1="136" y1="78" x2="232" y2="78" stroke="#00f0ff" stroke-opacity="0.15" stroke-width="0.5"/>
+    <line x1="136" y1="86" x2="232" y2="86" stroke="#00f0ff" stroke-opacity="0.18" stroke-width="0.5"/>
+    <line x1="136" y1="94" x2="232" y2="94" stroke="#00f0ff" stroke-opacity="0.22" stroke-width="0.5"/>
+    <line x1="136" y1="102" x2="232" y2="102" stroke="#00f0ff" stroke-opacity="0.28" stroke-width="0.5"/>
+    <line x1="136" y1="110" x2="232" y2="110" stroke="#00f0ff" stroke-opacity="0.35" stroke-width="0.5"/>
+    <line x1="136" y1="118" x2="232" y2="118" stroke="#00f0ff" stroke-opacity="0.42" stroke-width="0.5"/>
+    <line x1="136" y1="126" x2="232" y2="126" stroke="#00f0ff" stroke-opacity="0.5" stroke-width="0.5"/>
+    <line x1="136" y1="134" x2="232" y2="134" stroke="#00f0ff" stroke-opacity="0.55" stroke-width="0.5"/>
+
+    <!-- Depth points / measurement markers -->
+    <circle cx="160" cy="90" r="1.5" fill="#00f0ff" fill-opacity="0.4"/>
+    <circle cx="184" cy="90" r="1.5" fill="#00f0ff" fill-opacity="0.3"/>
+    <circle cx="208" cy="90" r="1.5" fill="#00f0ff" fill-opacity="0.4"/>
+    <circle cx="148" cy="120" r="1.5" fill="#00f0ff" fill-opacity="0.7"/>
+    <circle cx="168" cy="120" r="1.5" fill="#00f0ff" fill-opacity="0.6"/>
+    <circle cx="188" cy="120" r="1.5" fill="#00f0ff" fill-opacity="0.7"/>
+    <circle cx="208" cy="120" r="1.5" fill="#00f0ff" fill-opacity="0.6"/>
+
+    <!-- Animated scan sweep -->
+    <line x1="136" y1="70" x2="136" y2="138" stroke="#00f0ff" stroke-width="0.8" stroke-opacity="0.6">
+      <animate attributeName="x1" values="136;232;136" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="136;232;136" dur="3s" repeatCount="indefinite"/>
+    </line>
+
+    <!-- Label -->
+    <text x="184" y="165" font-family="'Courier New', monospace" font-size="6" fill="#00f0ff" fill-opacity="0.3" text-anchor="middle">depth · z-buffer</text>
+  </g>
+
+  <!-- Separator / active layer highlights -->
+  <rect x="134" y="68" width="100" height="80" rx="3" fill="none" stroke="#00f0ff" stroke-opacity="0.2" stroke-width="1"/>
+
+  <!-- Active layer indicator: foreground objects -->
+  <rect x="134" y="118" width="100" height="30" rx="0" fill="#00f0ff" fill-opacity="0.06" stroke="#00f0ff" stroke-opacity="0.3" stroke-width="0.8"/>
+  <text x="138" y="130" font-family="'Courier New', monospace" font-size="5.5" fill="#00f0ff" fill-opacity="0.6">FG: trees + hills</text>
+  <text x="138" y="140" font-family="'Courier New', monospace" font-size="5.5" fill="#00f0ff" fill-opacity="0.4">BG: sky + mountains</text>
+
+  <!-- ===== ARROW 2 ===== -->
+  <g filter="url(#softGlow)">
+    <line x1="242" y1="106" x2="270" y2="106" stroke="#a855f7" stroke-width="1.2" stroke-opacity="0.5"/>
+    <polyline points="265,102 270,106 265,110" fill="none" stroke="#a855f7" stroke-width="1.2" stroke-opacity="0.5"/>
+  </g>
+  <text x="256" y="98" font-family="'Courier New', monospace" font-size="6" fill="#a855f7" fill-opacity="0.35" text-anchor="middle">extrude</text>
+
+  <!-- ===== SECTION: 2.5D PAPER-CUT RECONSTRUCTION ===== -->
+
+  <!-- Section label -->
+  <text x="298" y="50" font-family="'Courier New', monospace" font-size="8" fill="#00f0ff" fill-opacity="0.5" text-anchor="middle" letter-spacing="2">2.5D MODEL</text>
+
+  <!-- 3D viewport frame -->
+  <rect x="246" y="58" width="104" height="104" rx="4" fill="#05080f" stroke="#00f0ff" stroke-opacity="0.2" stroke-width="1"/>
+
+  <!-- Perspective grid on floor -->
+  <g clip-path="url(#spaceClip)">
+    <!-- Floor plane with perspective grid -->
+    <polygon points="248,158 348,158 398,138 248,138" fill="#0a1220" stroke="#00f0ff" stroke-opacity="0.08" stroke-width="0.5"/>
+    <!-- Grid lines on floor - horizontal -->
+    <line x1="248" y1="143" x2="348" y2="143" stroke="#00f0ff" stroke-opacity="0.06" stroke-width="0.5"/>
+    <line x1="248" y1="148" x2="348" y2="148" stroke="#00f0ff" stroke-opacity="0.08" stroke-width="0.5"/>
+    <line x1="248" y1="153" x2="348" y2="153" stroke="#00f0ff" stroke-opacity="0.1" stroke-width="0.5"/>
+    <!-- Grid lines - vertical (perspective) -->
+    <line x1="258" y1="138" x2="253" y2="158" stroke="#00f0ff" stroke-opacity="0.06" stroke-width="0.5"/>
+    <line x1="273" y1="138" x2="263" y2="158" stroke="#00f0ff" stroke-opacity="0.08" stroke-width="0.5"/>
+    <line x1="288" y1="138" x2="273" y2="158" stroke="#00f0ff" stroke-opacity="0.1" stroke-width="0.5"/>
+    <line x1="303" y1="138" x2="283" y2="158" stroke="#00f0ff" stroke-opacity="0.12" stroke-width="0.5"/>
+    <line x1="318" y1="138" x2="293" y2="158" stroke="#00f0ff" stroke-opacity="0.14" stroke-width="0.5"/>
+    <line x1="333" y1="138" x2="303" y2="158" stroke="#00f0ff" stroke-opacity="0.16" stroke-width="0.5"/>
+
+    <!-- === LAYER 1: Sky / background plane (farthest, smallest) === -->
+    <polygon points="253,95 337,80 347,100 263,115" fill="#1a2840" fill-opacity="0.7" stroke="#00f0ff" stroke-opacity="0.15" stroke-width="0.8" filter="url(#layerShadow)"/>
+    <!-- Mountains silhouette on sky plane -->
+    <polygon points="258,105 278,90 298,100 318,88 338,98" fill="none" stroke="#00f0ff" stroke-opacity="0.15" stroke-width="0.6"/>
+    <!-- Sun on BG plane -->
+    <circle cx="318" cy="86" r="4" fill="#fbbf24" fill-opacity="0.25" stroke="#fbbf24" stroke-opacity="0.3" stroke-width="0.5"/>
+
+    <!-- === LAYER 2: Midground plane (middle depth) === -->
+    <polygon points="248,120 352,100 360,135 256,155" fill="#12203a" fill-opacity="0.85" stroke="#00f0ff" stroke-opacity="0.25" stroke-width="1" filter="url(#layerShadow)">
+      <animate attributeName="fill-opacity" values="0.85;0.9;0.85" dur="4s" repeatCount="indefinite"/>
+    </polygon>
+    <!-- Trees on mid plane -->
+    <polygon points="268,145 273,128 278,145" fill="#0a1828" stroke="#00f0ff" stroke-opacity="0.2" stroke-width="0.5"/>
+    <polygon points="282,148 288,126 294,148" fill="#0a1828" stroke="#00f0ff" stroke-opacity="0.2" stroke-width="0.5"/>
+    <polygon points="296,145 301,130 306,145" fill="#0a1828" stroke="#00f0ff" stroke-opacity="0.2" stroke-width="0.5"/>
+    <polygon points="310,147 315,128 320,147" fill="#0a1828" stroke="#00f0ff" stroke-opacity="0.2" stroke-width="0.5"/>
+
+    <!-- === LAYER 3: Foreground plane (closest, largest) === -->
+    <polygon points="248,138 348,118 356,162 256,162" fill="#0e1e30" fill-opacity="0.95" stroke="#00f0ff" stroke-opacity="0.4" stroke-width="1.2" filter="url(#layerShadow)">
+      <animate attributeName="stroke-opacity" values="0.4;0.6;0.4" dur="3s" repeatCount="indefinite"/>
+    </polygon>
+    <!-- Foreground hills -->
+    <polygon points="255,155 270,140 285,158 300,142 315,156 330,145 345,158 355,148" fill="none" stroke="#00f0ff" stroke-opacity="0.3" stroke-width="0.8"/>
+    <!-- Water on foreground -->
+    <polygon points="248,158 348,158 398,138 248,138" fill="#06101e" stroke="#00f0ff" stroke-opacity="0.1" stroke-width="0.5"/>
+    <!-- Water shimmer -->
+    <line x1="255" y1="152" x2="290" y2="150" stroke="#00f0ff" stroke-opacity="0.15" stroke-width="0.5"/>
+    <line x1="260" y1="155" x2="310" y2="153" stroke="#00f0ff" stroke-opacity="0.12" stroke-width="0.5"/>
+
+    <!-- === Connecting struts (paper-cut edge connectors) === -->
+    <!-- Left strut -->
+    <line x1="256" y1="162" x2="255" y2="118" stroke="#00f0ff" stroke-opacity="0.2" stroke-width="0.5" stroke-dasharray="2,2"/>
+    <!-- Right strut -->
+    <line x1="348" y1="118" x2="356" y2="162" stroke="#00f0ff" stroke-opacity="0.2" stroke-width="0.5" stroke-dasharray="2,2"/>
+    <!-- Middle struts -->
+    <line x1="298" y1="105" x2="300" y2="158" stroke="#a855f7" stroke-opacity="0.15" stroke-width="0.5" stroke-dasharray="2,2"/>
+
+    <!-- Camera / viewpoint indicator -->
+    <g filter="url(#strongGlow)">
+      <circle cx="298" cy="65" r="4" fill="#00f0ff" fill-opacity="0.8"/>
+      <circle cx="298" cy="65" r="2" fill="#ffffff" fill-opacity="0.9"/>
+      <!-- FOV cone -->
+      <line x1="294" y1="69" x2="280" y2="95" stroke="#00f0ff" stroke-opacity="0.25" stroke-width="0.8"/>
+      <line x1="302" y1="69" x2="316" y2="95" stroke="#00f0ff" stroke-opacity="0.25" stroke-width="0.8"/>
+      <line x1="298" y1="73" x2="298" y2="95" stroke="#00f0ff" stroke-opacity="0.2" stroke-width="0.5"/>
+    </g>
+    <text x="298" y="78" font-family="'Courier New', monospace" font-size="5" fill="#00f0ff" fill-opacity="0.4" text-anchor="middle">cam</text>
+
+    <!-- Scan line over 3D -->
+    <rect x="246" y="58" width="104" height="104" fill="url(#scanlines)" opacity="0.3"/>
+  </g>
+
+  <!-- 3D frame border glow -->
+  <rect x="246" y="58" width="104" height="104" rx="4" fill="none" stroke="#00f0ff" stroke-opacity="0.25" stroke-width="1">
+    <animate attributeName="stroke-opacity" values="0.25;0.45;0.25" dur="2.5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Layer labels on right side of 3D -->
+  <text x="360" y="96" font-family="'Courier New', monospace" font-size="5.5" fill="#00f0ff" fill-opacity="0.4">BG</text>
+  <text x="362" y="124" font-family="'Courier New', monospace" font-size="5.5" fill="#00f0ff" fill-opacity="0.55">MID</text>
+  <text x="364" y="152" font-family="'Courier New', monospace" font-size="5.5" fill="#00f0ff" fill-opacity="0.7">FG</text>
+  <!-- Connecting lines -->
+  <line x1="355" y1="95" x2="347" y2="100" stroke="#00f0ff" stroke-opacity="0.2" stroke-width="0.5"/>
+  <line x1="357" y1="123" x2="360" y2="135" stroke="#00f0ff" stroke-opacity="0.25" stroke-width="0.5"/>
+  <line x1="359" y1="151" x2="356" y2="162" stroke="#00f0ff" stroke-opacity="0.3" stroke-width="0.5"/>
+
+  <!-- ===== RIGHT PANEL: Z-DEPTH VISUALIZATION ===== -->
+
+  <!-- Depth scale bar -->
+  <rect x="382" y="70" width="8" height="72" rx="2" fill="#0a1020" stroke="#00f0ff" stroke-opacity="0.15" stroke-width="0.8"/>
+
+  <!-- Gradient fill showing depth range -->
+  <defs>
+    <linearGradient id="depthGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#7c3aed" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#1a1a2e" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+  <rect x="383" y="71" width="6" height="70" rx="1" fill="url(#depthGrad)"/>
+
+  <!-- Depth tick marks -->
+  <text x="396" y="77" font-family="'Courier New', monospace" font-size="5" fill="#00f0ff" fill-opacity="0.4">z=0</text>
+  <line x1="390" y1="76" x2="394" y2="76" stroke="#00f0ff" stroke-opacity="0.3" stroke-width="0.5"/>
+  <text x="396" y="106" font-family="'Courier New', monospace" font-size="5" fill="#00f0ff" fill-opacity="0.4">z=1</text>
+  <line x1="390" y1="105" x2="394" y2="105" stroke="#00f0ff" stroke-opacity="0.3" stroke-width="0.5"/>
+  <text x="396" y="137" font-family="'Courier New', monospace" font-size="5" fill="#00f0ff" fill-opacity="0.4">z=2</text>
+  <line x1="390" y1="136" x2="394" y2="136" stroke="#00f0ff" stroke-opacity="0.3" stroke-width="0.5"/>
+
+  <!-- Current depth indicator dot -->
+  <circle cx="386" cy="110" r="3" fill="#00f0ff" filter="url(#strongGlow)">
+    <animate attributeName="cy" values="76;136;76" dur="4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1"/>
+  </circle>
+
+  <!-- ===== BOTTOM: PROCESS PIPELINE FLOW ===== -->
+
+  <!-- Pipeline separator -->
+  <line x1="24" y1="172" x2="456" y2="172" stroke="#00f0ff" stroke-opacity="0.1" stroke-width="0.5"/>
+
+  <!-- Step indicators -->
+  <g font-family="'Courier New', monospace" font-size="7.5">
+    <!-- Step 1 -->
+    <rect x="28" y="180" width="52" height="16" rx="2" fill="#00f0ff" fill-opacity="0.08" stroke="#00f0ff" stroke-opacity="0.25" stroke-width="0.8"/>
+    <text x="54" y="191" fill="#00f0ff" fill-opacity="0.7" text-anchor="middle">Depth Est.</text>
+
+    <!-- Arrow -->
+    <line x1="84" y1="188" x2="96" y2="188" stroke="#00f0ff" stroke-opacity="0.3" stroke-width="0.8"/>
+    <polyline points="93,185 96,188 93,191" fill="none" stroke="#00f0ff" stroke-opacity="0.3" stroke-width="0.8"/>
+
+    <!-- Step 2 -->
+    <rect x="100" y="180" width="52" height="16" rx="2" fill="#00f0ff" fill-opacity="0.08" stroke="#00f0ff" stroke-opacity="0.25" stroke-width="0.8"/>
+    <text x="126" y="191" fill="#00f0ff" fill-opacity="0.7" text-anchor="middle">Segmentation</text>
+
+    <!-- Arrow -->
+    <line x1="156" y1="188" x2="168" y2="188" stroke="#00f0ff" stroke-opacity="0.3" stroke-width="0.8"/>
+    <polyline points="165,185 168,188 165,191" fill="none" stroke="#00f0ff" stroke-opacity="0.3" stroke-width="0.8"/>
+
+    <!-- Step 3 -->
+    <rect x="172" y="180" width="52" height="16" rx="2" fill="#a855f7" fill-opacity="0.08" stroke="#a855f7" stroke-opacity="0.25" stroke-width="0.8"/>
+    <text x="198" y="191" fill="#a855f7" fill-opacity="0.7" text-anchor="middle">Layer Split</text>
+
+    <!-- Arrow -->
+    <line x1="228" y1="188" x2="240" y2="188" stroke="#a855f7" stroke-opacity="0.3" stroke-width="0.8"/>
+    <polyline points="237,185 240,188 237,191" fill="none" stroke="#a855f7" stroke-opacity="0.3" stroke-width="0.8"/>
+
+    <!-- Step 4 -->
+    <rect x="244" y="180" width="52" height="16" rx="2" fill="#a855f7" fill-opacity="0.08" stroke="#a855f7" stroke-opacity="0.25" stroke-width="0.8"/>
+    <text x="270" y="191" fill="#a855f7" fill-opacity="0.7" text-anchor="middle">Extrusion</text>
+
+    <!-- Arrow -->
+    <line x1="300" y1="188" x2="312" y2="188" stroke="#a855f7" stroke-opacity="0.3" stroke-width="0.8"/>
+    <polyline points="309,185 312,188 309,191" fill="none" stroke="#a855f7" stroke-opacity="0.3" stroke-width="0.8"/>
+
+    <!-- Step 5 -->
+    <rect x="316" y="180" width="60" height="16" rx="2" fill="#fbbf24" fill-opacity="0.06" stroke="#fbbf24" stroke-opacity="0.2" stroke-width="0.8"/>
+    <text x="346" y="191" fill="#fbbf24" fill-opacity="0.6" text-anchor="middle">Virtual Cam</text>
+
+    <!-- Arrow -->
+    <line x1="380" y1="188" x2="392" y2="188" stroke="#fbbf24" stroke-opacity="0.3" stroke-width="0.8"/>
+    <polyline points="389,185 392,188 389,191" fill="none" stroke="#fbbf24" stroke-opacity="0.3" stroke-width="0.8"/>
+
+    <!-- Step 6 -->
+    <rect x="396" y="180" width="52" height="16" rx="2" fill="#00f0ff" fill-opacity="0.08" stroke="#00f0ff" stroke-opacity="0.25" stroke-width="0.8"/>
+    <text x="422" y="191" fill="#00f0ff" fill-opacity="0.7" text-anchor="middle">Render</text>
+  </g>
+
+  <!-- Tech stack pills -->
+  <g font-family="'Courier New', monospace" font-size="6.5">
+    <rect x="28" y="206" width="22" height="12" rx="1" fill="none" stroke="#00f0ff" stroke-opacity="0.15" stroke-width="0.5"/>
+    <text x="39" y="215" fill="#00f0ff" fill-opacity="0.35" text-anchor="middle">DAV2</text>
+
+    <rect x="54" y="206" width="18" height="12" rx="1" fill="none" stroke="#00f0ff" stroke-opacity="0.15" stroke-width="0.5"/>
+    <text x="63" y="215" fill="#00f0ff" fill-opacity="0.35" text-anchor="middle">SAM</text>
+
+    <rect x="76" y="206" width="22" height="12" rx="1" fill="none" stroke="#00f0ff" stroke-opacity="0.15" stroke-width="0.5"/>
+    <text x="87" y="215" fill="#00f0ff" fill-opacity="0.35" text-anchor="middle">GDINO</text>
+
+    <text x="116" y="215" fill="#00f0ff" fill-opacity="0.2">PyTorch</text>
+
+    <rect x="160" y="206" width="24" height="12" rx="1" fill="none" stroke="#a855f7" stroke-opacity="0.15" stroke-width="0.5"/>
+    <text x="172" y="215" fill="#a855f7" fill-opacity="0.35" text-anchor="middle">Three</text>
+
+    <text x="204" y="215" fill="#00f0ff" fill-opacity="0.2">ComfyUI</text>
+  </g>
+
+  <!-- ===== CORNER INFO ===== -->
+
+  <!-- Top left project info -->
+  <text x="16" y="24" font-family="'Courier New', monospace" font-size="9" fill="#00f0ff" fill-opacity="0.5" letter-spacing="2">01 · AICSS</text>
+  <text x="16" y="38" font-family="'Courier New', monospace" font-size="7" fill="#00f0ff" fill-opacity="0.25" letter-spacing="1">AI Cinematic Spatial System</text>
+
+  <!-- Top right status -->
+  <rect x="406" y="12" width="58" height="14" rx="2" fill="#fbbf24" fill-opacity="0.06" stroke="#fbbf24" stroke-opacity="0.25" stroke-width="0.8"/>
+  <text x="435" y="22" font-family="'Courier New', monospace" font-size="6.5" fill="#fbbf24" fill-opacity="0.6" text-anchor="middle">EXPERIMENTAL</text>
+
+  <!-- Bottom right year -->
+  <text x="464" y="268" font-family="'Courier New', monospace" font-size="8" fill="#00f0ff" fill-opacity="0.2" text-anchor="end">2026</text>
+
+  <!-- Decorative corner brackets -->
+  <polyline points="16,16 16,24 24,24" fill="none" stroke="#00f0ff" stroke-opacity="0.2" stroke-width="0.8"/>
+  <polyline points="464,16 464,24 456,24" fill="none" stroke="#00f0ff" stroke-opacity="0.2" stroke-width="0.8"/>
+  <polyline points="16,264 16,256 24,256" fill="none" stroke="#00f0ff" stroke-opacity="0.2" stroke-width="0.8"/>
+  <polyline points="464,264 464,256 456,256" fill="none" stroke="#00f0ff" stroke-opacity="0.2" stroke-width="0.8"/>
+</svg>

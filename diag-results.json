@@ -1,0 +1,346 @@
+{
+  "cards": [
+    {
+      "i": 0,
+      "idx": "01",
+      "rect": {
+        "x": 144,
+        "y": 285,
+        "w": 1152,
+        "h": 289
+      }
+    },
+    {
+      "i": 1,
+      "idx": "02",
+      "rect": {
+        "x": 144,
+        "y": 586,
+        "w": 570,
+        "h": 289
+      }
+    },
+    {
+      "i": 2,
+      "idx": "03",
+      "rect": {
+        "x": 726,
+        "y": 586,
+        "w": 279,
+        "h": 289
+      }
+    },
+    {
+      "i": 3,
+      "idx": "04",
+      "rect": {
+        "x": 1017,
+        "y": 586,
+        "w": 279,
+        "h": 289
+      }
+    },
+    {
+      "i": 4,
+      "idx": "05",
+      "rect": {
+        "x": 144,
+        "y": 887,
+        "w": 570,
+        "h": 289
+      }
+    },
+    {
+      "i": 5,
+      "idx": "06",
+      "rect": {
+        "x": 726,
+        "y": 887,
+        "w": 279,
+        "h": 289
+      }
+    },
+    {
+      "i": 6,
+      "idx": "07",
+      "rect": {
+        "x": 1017,
+        "y": 887,
+        "w": 279,
+        "h": 289
+      }
+    }
+  ],
+  "bgImage": [
+    {
+      "i": 0,
+      "idx": "01",
+      "bgImage": "url(\"http://localhost:3000/covers/aicss.svg\")",
+      "bgSize": "cover"
+    },
+    {
+      "i": 1,
+      "idx": "02",
+      "bgImage": "url(\"http://localhost:3000/covers/time-fold.svg\")",
+      "bgSize": "cover"
+    },
+    {
+      "i": 2,
+      "idx": "03",
+      "bgImage": "url(\"http://localhost:3000/covers/humanity-docs.svg\")",
+      "bgSize": "cover"
+    },
+    {
+      "i": 3,
+      "idx": "04",
+      "bgImage": "url(\"http://localhost:3000/covers/lims.svg\")",
+      "bgSize": "cover"
+    },
+    {
+      "i": 4,
+      "idx": "05",
+      "bgImage": "url(\"http://localhost:3000/covers/ue-city.svg\")",
+      "bgSize": "cover"
+    },
+    {
+      "i": 5,
+      "idx": "06",
+      "bgImage": "url(\"http://localhost:3000/covers/arbook.svg\")",
+      "bgSize": "cover"
+    },
+    {
+      "i": 6,
+      "idx": "07",
+      "bgImage": "url(\"http://localhost:3000/covers/anifocus.svg\")",
+      "bgSize": "cover"
+    }
+  ],
+  "probes": [
+    {
+      "src": "/covers/aicss.svg",
+      "url": "/covers/aicss.svg?cb=1784636655374_3tiakhzwy1g",
+      "event": "load",
+      "naturalWidth": 480,
+      "naturalHeight": 280,
+      "complete": true
+    },
+    {
+      "src": "/covers/time-fold.svg",
+      "url": "/covers/time-fold.svg?cb=1784636655374_4s4rzygctdo",
+      "event": "load",
+      "naturalWidth": 480,
+      "naturalHeight": 240,
+      "complete": true
+    },
+    {
+      "src": "/covers/humanity-docs.svg",
+      "url": "/covers/humanity-docs.svg?cb=1784636655374_xy537ka7of",
+      "event": "load",
+      "naturalWidth": 480,
+      "naturalHeight": 240,
+      "complete": true
+    },
+    {
+      "src": "/covers/lims.svg",
+      "url": "/covers/lims.svg?cb=1784636655374_r32jaecuqj",
+      "event": "load",
+      "naturalWidth": 400,
+      "naturalHeight": 240,
+      "complete": true
+    },
+    {
+      "src": "/covers/ue-city.svg",
+      "url": "/covers/ue-city.svg?cb=1784636655374_g543vtzxi3r",
+      "event": "load",
+      "naturalWidth": 400,
+      "naturalHeight": 240,
+      "complete": true
+    },
+    {
+      "src": "/covers/arbook.svg",
+      "url": "/covers/arbook.svg?cb=1784636655374_p7we3ddpg7q",
+      "event": "load",
+      "naturalWidth": 400,
+      "naturalHeight": 240,
+      "complete": true
+    },
+    {
+      "src": "/covers/anifocus.svg",
+      "url": "/covers/anifocus.svg?cb=1784636655374_e5y0kfn8jcw",
+      "event": "load",
+      "naturalWidth": 400,
+      "naturalHeight": 240,
+      "complete": true
+    }
+  ],
+  "pixels": [
+    {
+      "i": 0,
+      "idx": "01",
+      "sampleX": 720,
+      "sampleY": 429,
+      "center": [
+        17,
+        27,
+        34,
+        17
+      ],
+      "topLeft": [
+        21,
+        26,
+        32,
+        21
+      ],
+      "bottomRight": [
+        7,
+        9,
+        12,
+        7
+      ]
+    },
+    {
+      "i": 1,
+      "idx": "02",
+      "sampleX": 429,
+      "sampleY": 730,
+      "center": [
+        51,
+        33,
+        73,
+        28
+      ],
+      "topLeft": [
+        24,
+        31,
+        48,
+        23
+      ],
+      "bottomRight": [
+        7,
+        6,
+        9,
+        7
+      ]
+    },
+    {
+      "i": 2,
+      "idx": "03",
+      "sampleX": 866,
+      "sampleY": 730,
+      "center": [
+        32,
+        26,
+        19,
+        32
+      ],
+      "topLeft": [
+        23,
+        21,
+        20,
+        23
+      ],
+      "bottomRight": [
+        7,
+        7,
+        6,
+        7
+      ]
+    },
+    {
+      "i": 3,
+      "idx": "04",
+      "sampleX": 1157,
+      "sampleY": 730,
+      "center": [
+        43,
+        51,
+        53,
+        66
+      ],
+      "topLeft": [
+        23,
+        56,
+        61,
+        23
+      ],
+      "bottomRight": [
+        8,
+        10,
+        10,
+        8
+      ]
+    },
+    {
+      "i": 4,
+      "idx": "05",
+      "sampleX": 429,
+      "sampleY": 1031,
+      "center": [
+        31,
+        20,
+        21,
+        27
+      ],
+      "topLeft": [
+        42,
+        31,
+        30,
+        42
+      ],
+      "bottomRight": [
+        10,
+        7,
+        8,
+        10
+      ]
+    },
+    {
+      "i": 5,
+      "idx": "06",
+      "sampleX": 866,
+      "sampleY": 1031,
+      "center": [
+        22,
+        20,
+        29,
+        23
+      ],
+      "topLeft": [
+        41,
+        33,
+        54,
+        40
+      ],
+      "bottomRight": [
+        7,
+        8,
+        10,
+        7
+      ]
+    },
+    {
+      "i": 6,
+      "idx": "07",
+      "sampleX": 1157,
+      "sampleY": 1031,
+      "center": [
+        43,
+        28,
+        40,
+        70
+      ],
+      "topLeft": [
+        50,
+        35,
+        47,
+        50
+      ],
+      "bottomRight": [
+        8,
+        7,
+        10,
+        8
+      ]
+    }
+  ]
+}
