@@ -20,9 +20,8 @@ export default function FpsMeter() {
       const value = avg > 0 ? Math.round(1000 / avg) : 0;
       setFps(value);
 
-      const perf = performance as unknown as { memory?: { usedJSHeapSize: number } };
-      if (perf.memory) {
-        setMem(Math.round(perf.memory.usedJSHeapSize / 1024 / 1024));
+      if (performance.memory) {
+        setMem(Math.round(performance.memory.usedJSHeapSize / 1024 / 1024));
       }
       rafRef.current = requestAnimationFrame(tick);
     };

@@ -33,7 +33,7 @@
   <rect x="40" y="137" width="70" height="4" rx="2" fill="#a855f7" fill-opacity="0.15"/>
   <rect x="40" y="145" width="45" height="4" rx="2" fill="#a855f7" fill-opacity="0.15"/>
   <rect x="40" y="175" width="60" height="15" rx="3" fill="#a855f7" fill-opacity="0.2" stroke="#a855f7" stroke-opacity="0.5" stroke-width="1"/>
-  <text x="70" y="185" font-family="monospace" font-size="6" fill="#a855f7" fill-opacity="0.8" text-anchor="middle">k�</text>
+  <text x="70" y="185" font-family="monospace" font-size="6" fill="#a855f7" fill-opacity="0.8" text-anchor="middle">k·</text>
 
   <!-- Book title lines -->
   <rect x="40" y="75" width="60" height="4" rx="2" fill="#a855f7" fill-opacity="0.3"/>
@@ -79,6 +79,6 @@
   <rect x="0" y="0" width="400" height="60" fill="url(#arAccent)"/>
 
   <!-- Label -->
-  <text x="20" y="220" font-family="monospace" font-size="9" fill="#a855f7" fill-opacity="0.6" letter-spacing="2">04 � AR E-BOOK</text>
+  <text x="20" y="220" font-family="monospace" font-size="9" fill="#a855f7" fill-opacity="0.6" letter-spacing="2">04 · AR E-BOOK</text>
   <text x="380" y="228" font-family="monospace" font-size="8" fill="#a855f7" fill-opacity="0.3" text-anchor="end">2025</text>
 </svg>

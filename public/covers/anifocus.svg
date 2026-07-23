@@ -90,6 +90,6 @@
   <rect x="0" y="0" width="400" height="60" fill="url(#aniAccent)"/>
 
   <!-- Label -->
-  <text x="20" y="220" font-family="monospace" font-size="9" fill="#f472b6" fill-opacity="0.6" letter-spacing="2">05 � ANIFOCUS</text>
+  <text x="20" y="220" font-family="monospace" font-size="9" fill="#f472b6" fill-opacity="0.6" letter-spacing="2">05 · ANIFOCUS</text>
   <text x="380" y="228" font-family="monospace" font-size="8" fill="#f472b6" fill-opacity="0.3" text-anchor="end">2025</text>
 </svg>

@@ -60,12 +60,12 @@ export const projects: Project[] = [
     media: [
       {
         type: 'image',
-        src: '/media/aicss-1.jpg',
+        src: '/media/aicss-1.svg',
         alt: 'AI场景解析流程',
       },
       {
         type: 'image',
-        src: '/media/aicss-2.jpg',
+        src: '/media/aicss-2.svg',
         alt: '纸雕空间化效果',
       },
     ],
@@ -110,12 +110,12 @@ export const projects: Project[] = [
       },
       {
         type: 'image',
-        src: '/media/time-fold-1.jpg',
+        src: '/media/time-fold-1.svg',
         alt: '时间折叠海报',
       },
       {
         type: 'image',
-        src: '/media/time-fold-2.jpg',
+        src: '/media/time-fold-2.svg',
         alt: '重点场景一览',
       },
     ],
@@ -155,12 +155,12 @@ export const projects: Project[] = [
     media: [
       {
         type: 'image',
-        src: '/media/humanity-docs-1.jpg',
+        src: '/media/humanity-docs-1.svg',
         alt: '推剪下的老街时光剧照',
       },
       {
         type: 'image',
-        src: '/media/humanity-docs-2.jpg',
+        src: '/media/humanity-docs-2.svg',
         alt: '拍摄现场',
       },
     ],
@@ -205,12 +205,12 @@ export const projects: Project[] = [
     media: [
       {
         type: 'image',
-        src: '/media/lims-1.jpg',
+        src: '/media/lims-1.svg',
         alt: 'LIMS系统界面',
       },
       {
         type: 'image',
-        src: '/media/lims-2.jpg',
+        src: '/media/lims-2.svg',
         alt: '数据管理模块',
       },
     ],
@@ -255,12 +255,12 @@ export const projects: Project[] = [
     media: [     
        {
       type: 'image',
-      src: '/media/urban-escape-1.jpg',
+      src: '/media/urban-escape-1.svg',
       alt: '对话系统界面',
       },
       {
         type: 'image',
-        src: '/media/urban-escape-2.jpg',
+        src: '/media/urban-escape-2.svg',
         alt: '移动敌人界面',
       },
     ],
@@ -389,22 +389,22 @@ export const projects: Project[] = [
       },
       {
         type: 'image',
-        src: '/media/love-remote-1.jpg',
+        src: '/media/love-remote-1.svg',
         alt: '恋爱遥控器游戏界面',
       },
       {
         type: 'image',
-        src: '/media/love-remote-2.jpg',
+        src: '/media/love-remote-2.svg',
         alt: '分支剧情系统',
       },
       {
         type: 'image',
-        src: '/media/love-remote-3.jpg',
+        src: '/media/love-remote-3.svg',
         alt: '好感度系统界面',
       },
       {
         type: 'image',
-        src: '/media/love-remote-4.jpg',
+        src: '/media/love-remote-4.svg',
         alt: '好感度系统界面',
       },
     ],

@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-namespace */
-declare global {
+import 'react';
+
+declare module 'react' {
   namespace JSX {
     interface IntrinsicElements {
       'wistia-player': React.DetailedHTMLProps<

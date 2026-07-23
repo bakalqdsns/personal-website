@@ -39,6 +39,7 @@ export const metadata: Metadata = {
     title: '数字媒体作品展厅',
     description: '操作一个轻量级创意工具界面的瞬间。',
     type: 'website',
+    images: [{ url: '/api/og', width: 1200, height: 630, alt: '数字媒体作品展厅' }],
   },
 };
 

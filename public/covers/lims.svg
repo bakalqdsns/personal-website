@@ -68,6 +68,6 @@
   <rect x="0" y="0" width="400" height="60" fill="url(#limsAccent)"/>
 
   <!-- Label -->
-  <text x="20" y="220" font-family="monospace" font-size="9" fill="#00f0ff" fill-opacity="0.6" letter-spacing="2">02 � LIMS</text>
+  <text x="20" y="220" font-family="monospace" font-size="9" fill="#00f0ff" fill-opacity="0.6" letter-spacing="2">02 · LIMS</text>
   <text x="380" y="228" font-family="monospace" font-size="8" fill="#00f0ff" fill-opacity="0.3" text-anchor="end">2025</text>
 </svg>

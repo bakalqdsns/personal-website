@@ -9,7 +9,7 @@ export default function BilibiliPlayer({ src, className = '' }: BilibiliPlayerPr
   // 处理完整的嵌入URL或直接是BV号
   const embedSrc = src.includes('player.bilibili.com')
     ? src
-    : `//player.bilibili.com/player.html?isOutside=true&${src}`;
+    : `https://player.bilibili.com/player.html?isOutside=true&${src}`;
 
   return (
     <iframe
