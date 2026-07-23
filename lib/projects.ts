@@ -252,7 +252,18 @@ export const projects: Project[] = [
       type: 'image',
       src: '/covers/ue-city.svg',
     },
-    media: [],
+    media: [     
+       {
+      type: 'image',
+      src: '/media/urban-escape-1.jpg',
+      alt: '对话系统界面',
+      },
+      {
+        type: 'image',
+        src: '/media/urban-escape-2.jpg',
+        alt: '移动敌人界面',
+      },
+    ],
     challenges: [
       'AI敌人感知与行为逻辑',
       '物体交互框架与解谜机制',
@@ -372,6 +383,11 @@ export const projects: Project[] = [
     },
     media: [
       {
+        type: 'wistia',
+        src: '2t5nyei9hf',
+        alt: '视频描述',
+      },
+      {
         type: 'image',
         src: '/media/love-remote-1.jpg',
         alt: '恋爱遥控器游戏界面',
@@ -382,9 +398,14 @@ export const projects: Project[] = [
         alt: '分支剧情系统',
       },
       {
-        type: 'wistia',
-        src: '2t5nyei9hf',
-        alt: '视频描述',
+        type: 'image',
+        src: '/media/love-remote-3.jpg',
+        alt: '好感度系统界面',
+      },
+      {
+        type: 'image',
+        src: '/media/love-remote-4.jpg',
+        alt: '好感度系统界面',
       },
     ],
     challenges: [
