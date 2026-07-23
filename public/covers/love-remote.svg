@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+    <linearGradient id="remote" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4a4a6a"/>
+      <stop offset="100%" stop-color="#2a2a4a"/>
+    </linearGradient>
+    <linearGradient id="heart" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6b9d"/>
+      <stop offset="100%" stop-color="#c44569"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bg)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="320" cy="60" r="40" fill="none" stroke="#ff6b9d" stroke-width="1" opacity="0.3"/>
+  <circle cx="340" cy="80" r="25" fill="none" stroke="#c44569" stroke-width="1" opacity="0.2"/>
+  
+  <!-- Remote control body -->
+  <rect x="130" y="50" width="140" height="220" rx="20" fill="url(#remote)"/>
+  <rect x="130" y="50" width="140" height="220" rx="20" fill="none" stroke="#5a5a7a" stroke-width="2"/>
+  
+  <!-- Screen -->
+  <rect x="145" y="65" width="110" height="70" rx="8" fill="#0a0a1a"/>
+  <rect x="145" y="65" width="110" height="70" rx="8" fill="none" stroke="#3a3a5a" stroke-width="1"/>
+  
+  <!-- Heart on screen -->
+  <path d="M200 85 C200 75 185 70 175 80 C165 70 150 75 150 85 C150 100 175 115 175 115 C175 115 200 100 200 85" 
+        fill="url(#heart)" filter="url(#glow)"/>
+  
+  <!-- D-pad -->
+  <circle cx="200" cy="170" r="30" fill="#2a2a4a" stroke="#5a5a7a" stroke-width="1"/>
+  <rect x="190" y="150" width="20" height="40" rx="2" fill="#3a3a5a"/>
+  <rect x="180" y="160" width="40" height="20" rx="2" fill="#3a3a5a"/>
+  
+  <!-- Action buttons -->
+  <circle cx="165" cy="225" r="12" fill="#ff6b9d"/>
+  <circle cx="200" cy="225" r="12" fill="#6bcfff"/>
+  <circle cx="235" cy="225" r="12" fill="#7dff7d"/>
+  
+  <!-- Button labels -->
+  <text x="165" y="229" font-size="10" fill="#fff" text-anchor="middle" font-family="sans-serif">A</text>
+  <text x="200" y="229" font-size="10" fill="#fff" text-anchor="middle" font-family="sans-serif">B</text>
+  <text x="235" y="229" font-size="10" fill="#fff" text-anchor="middle" font-family="sans-serif">C</text>
+  
+  <!-- Bottom decoration - small hearts -->
+  <path d="M170 255 C170 250 165 248 162 252 C159 248 154 250 154 255 C154 262 162 268 162 268 C162 268 170 262 170 255" 
+        fill="#ff6b9d" opacity="0.6"/>
+  <path d="M240 255 C240 250 245 248 248 252 C251 248 256 250 256 255 C256 262 248 268 248 268 C248 268 240 262 240 255" 
+        fill="#c44569" opacity="0.6"/>
+  
+  <!-- Signal waves -->
+  <path d="M280 120 Q300 100 280 80" fill="none" stroke="#ff6b9d" stroke-width="2" opacity="0.5"/>
+  <path d="M290 125 Q320 95 290 65" fill="none" stroke="#ff6b9d" stroke-width="2" opacity="0.3"/>
+  <path d="M120 120 Q100 100 120 80" fill="none" stroke="#6bcfff" stroke-width="2" opacity="0.5"/>
+  <path d="M110 125 Q80 95 110 65" fill="none" stroke="#6bcfff" stroke-width="2" opacity="0.3"/>
+</svg>

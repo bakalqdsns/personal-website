@@ -10,19 +10,23 @@ export default function ProjectsGrid() {
   const [hovered, setHovered] = useState<number | null>(null);
   const openAt = useModalStore((s) => s.openAt);
 
-  // 7 projects — 3-row asymmetric grid (4 cols):
-  // Row 1: [  time-fold (full)                        ]
-  // Row 2: [ human-docs (2col) ] [ aicss ] [ lims    ]
-  // Row 3: [ ue-city (2col)     ] [ ar-ebook ] [ anifocus ]
+  // 10 projects — 4-row asymmetric grid (4 cols):
+  // Row 1: [          time-fold (full)                     ]
+  // Row 2: [ love-remote (2col) ] [ aicss ] [ lims           ]
+  // Row 3: [ img-translator (2col) ] [ ue-city ] [ human-docs ]
+  // Row 4: [ gd-martial-arts (2col) ] [ ar-ebook ] [ anifocus ]
   const colSpan = (i: number) => {
     const map = [
       'lg:col-span-4 lg:row-span-1', // 01 time-fold — hero, full width
-      'lg:col-span-2 lg:row-span-1', // 02 human-docs
+      'lg:col-span-2 lg:row-span-1', // 02 love-remote
       'lg:col-span-1 lg:row-span-1', // 03 aicss
       'lg:col-span-1 lg:row-span-1', // 04 lims
-      'lg:col-span-2 lg:row-span-1', // 05 ue-city
-      'lg:col-span-1 lg:row-span-1', // 06 ar-ebook
-      'lg:col-span-1 lg:row-span-1', // 07 anifocus
+      'lg:col-span-2 lg:row-span-1', // 05 img-translator
+      'lg:col-span-1 lg:row-span-1', // 06 ue-city
+      'lg:col-span-1 lg:row-span-1', // 07 human-docs
+      'lg:col-span-2 lg:row-span-1', // 08 gd-martial-arts
+      'lg:col-span-1 lg:row-span-1', // 09 ar-ebook
+      'lg:col-span-1 lg:row-span-1', // 10 anifocus
     ];
     return map[i] ?? 'lg:col-span-1 lg:row-span-1';
   };
@@ -44,7 +48,7 @@ export default function ProjectsGrid() {
         </p>
       </div>
 
-      <div className="mx-auto grid max-w-6xl auto-rows-[220px] grid-cols-1 gap-3 sm:grid-cols-2 md:auto-rows-[260px] lg:grid-cols-4 lg:grid-rows-[repeat(3,minmax(0,1fr))]">
+      <div className="mx-auto grid max-w-6xl auto-rows-[220px] grid-cols-1 gap-3 sm:grid-cols-2 md:auto-rows-[260px] lg:grid-cols-4 lg:grid-rows-[repeat(4,minmax(0,1fr))]">
         {projects.map((p, i) => (
           <ProjectCard
             key={p.slug}
