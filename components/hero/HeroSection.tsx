@@ -57,9 +57,9 @@ export default function HeroSection() {
         {/* Body copy */}
         <p className="mt-10 max-w-2xl text-balance text-base leading-relaxed text-fg/70 md:text-lg">
           我是 <span className="font-medium text-cyan">刘淇</span>,做
-          <span className="font-medium text-cyan">视觉工具链</span>、
-          <span className="font-medium text-cyan">影像导演</span>、
-          <span className="font-medium text-cyan">游戏 / AR</span> 与
+          <span className="font-medium text-cyan">游戏制作</span>、
+          <span className="font-medium text-cyan">AI影像导演</span>、
+          <span className="font-medium text-cyan">视觉工具链</span> 与
           <span className="font-medium text-cyan">全栈系统</span> 的独立工程师。
           每个项目都展开成结构化档案——技术栈、角色定位、关键挑战、影像或界面素材——而不是一张张孤立的截图。
         </p>

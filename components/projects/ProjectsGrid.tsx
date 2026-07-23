@@ -44,7 +44,7 @@ export default function ProjectsGrid() {
           <span className="gradient-text">作品</span>索引
         </h2>
         <p className="mt-4 max-w-2xl text-muted">
-          非对称网格,鼠标悬停时卡片做视差倾斜,点击展开项目档案。
+          近些年独立制作、合作开发、参与开发的项目,点击展开项目档案。
         </p>
       </div>
 

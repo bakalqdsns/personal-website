@@ -77,7 +77,6 @@ export const projects: Project[] = [
     ],
     links: {
       github: 'https://github.com/bakalqdsns/AI-Cinematic-Spatial-System',
-      demo: '#',
     },
     highlights: [
       'AI视觉理解 Pipeline',
@@ -260,7 +259,7 @@ export const projects: Project[] = [
       '对话系统与剧情流程管理',
     ],
     links: {
-      baiduPan: '#',
+      baiduPan: 'https://pan.baidu.com/s/1PQa06G7Bb6Xdz4qlVKxRwQ?pwd=bxzy',
     },
     highlights: [
       'UE5.7 开发',
@@ -433,13 +432,8 @@ export const projects: Project[] = [
     media: [
       {
         type: 'image',
-        src: '/media/img-translator-1.jpg',
+        src: '/covers/img-translator.svg',
         alt: '图像翻译界面',
-      },
-      {
-        type: 'image',
-        src: '/media/img-translator-2.jpg',
-        alt: '翻译效果对比',
       },
     ],
     challenges: [
@@ -484,14 +478,10 @@ export const projects: Project[] = [
     media: [
       {
         type: 'image',
-        src: '/media/gd-martial-arts-1.jpg',
+        src: '/covers/gd-martial-arts.svg',
         alt: '广东武术首页',
       },
-      {
-        type: 'image',
-        src: '/media/gd-martial-arts-2.jpg',
-        alt: '气泡地图可视化',
-      },
+
     ],
     challenges: [
       'p5.js 粒子系统：1400 像素点采样，弹簧入场 + 鼠标排斥',

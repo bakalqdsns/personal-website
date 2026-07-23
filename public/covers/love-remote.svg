@@ -1,69 +1,100 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1a1a2e"/>
-      <stop offset="100%" stop-color="#16213e"/>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060810"/>
+      <stop offset="100%" stop-color="#0a1428"/>
     </linearGradient>
-    <linearGradient id="remote" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#4a4a6a"/>
-      <stop offset="100%" stop-color="#2a2a4a"/>
-    </linearGradient>
-    <linearGradient id="heart" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ff6b9d"/>
-      <stop offset="100%" stop-color="#c44569"/>
-    </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <radialGradient id="glowPink" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff6b9d" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ff6b9d" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    <filter id="strongGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="scanlines" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="4" y2="0" stroke="#00f0ff" stroke-opacity="0.03" stroke-width="1"/>
+    </pattern>
   </defs>
-  
-  <!-- Background -->
-  <rect width="400" height="300" fill="url(#bg)"/>
-  
-  <!-- Decorative circles -->
-  <circle cx="320" cy="60" r="40" fill="none" stroke="#ff6b9d" stroke-width="1" opacity="0.3"/>
-  <circle cx="340" cy="80" r="25" fill="none" stroke="#c44569" stroke-width="1" opacity="0.2"/>
-  
+
+  <rect width="400" height="240" fill="url(#bgGrad)"/>
+
+  <!-- Ambient glow -->
+  <ellipse cx="200" cy="120" rx="120" ry="80" fill="url(#glowPink)" opacity="0.6"/>
+
+  <!-- Grid -->
+  <g stroke="#00f0ff" stroke-opacity="0.04" stroke-width="0.5">
+    <line x1="0" y1="60" x2="400" y2="60"/>
+    <line x1="0" y1="120" x2="400" y2="120"/>
+    <line x1="0" y1="180" x2="400" y2="180"/>
+    <line x1="100" y1="0" x2="100" y2="240"/>
+    <line x1="200" y1="0" x2="200" y2="240"/>
+    <line x1="300" y1="0" x2="300" y2="240"/>
+  </g>
+
+  <!-- Scanline overlay -->
+  <rect width="400" height="240" fill="url(#scanlines)" opacity="0.4"/>
+
   <!-- Remote control body -->
-  <rect x="130" y="50" width="140" height="220" rx="20" fill="url(#remote)"/>
-  <rect x="130" y="50" width="140" height="220" rx="20" fill="none" stroke="#5a5a7a" stroke-width="2"/>
-  
+  <g filter="url(#softGlow)">
+    <rect x="145" y="50" width="110" height="160" rx="16" fill="#0e1825" stroke="#ff6b9d" stroke-opacity="0.3" stroke-width="1.2"/>
+  </g>
+
   <!-- Screen -->
-  <rect x="145" y="65" width="110" height="70" rx="8" fill="#0a0a1a"/>
-  <rect x="145" y="65" width="110" height="70" rx="8" fill="none" stroke="#3a3a5a" stroke-width="1"/>
-  
+  <rect x="158" y="62" width="84" height="55" rx="6" fill="#0a0a1a" stroke="#ff6b9d" stroke-opacity="0.2" stroke-width="0.8"/>
+
   <!-- Heart on screen -->
-  <path d="M200 85 C200 75 185 70 175 80 C165 70 150 75 150 85 C150 100 175 115 175 115 C175 115 200 100 200 85" 
-        fill="url(#heart)" filter="url(#glow)"/>
-  
+  <path d="M200 78 C200 68 185 63 175 73 C165 63 150 68 150 78 C150 93 175 108 175 108 C175 108 200 93 200 78" 
+        fill="#ff6b9d" fill-opacity="0.6" filter="url(#strongGlow)">
+    <animate attributeName="fill-opacity" values="0.6;0.8;0.6" dur="2s" repeatCount="indefinite"/>
+  </path>
+
   <!-- D-pad -->
-  <circle cx="200" cy="170" r="30" fill="#2a2a4a" stroke="#5a5a7a" stroke-width="1"/>
-  <rect x="190" y="150" width="20" height="40" rx="2" fill="#3a3a5a"/>
-  <rect x="180" y="160" width="40" height="20" rx="2" fill="#3a3a5a"/>
-  
+  <circle cx="200" cy="148" r="24" fill="#0c1622" stroke="#ff6b9d" stroke-opacity="0.2" stroke-width="0.8"/>
+  <rect x="191" y="130" width="18" height="36" rx="2" fill="#1a2838" stroke="#ff6b9d" stroke-opacity="0.3" stroke-width="0.5"/>
+  <rect x="182" y="139" width="36" height="18" rx="2" fill="#1a2838" stroke="#ff6b9d" stroke-opacity="0.3" stroke-width="0.5"/>
+
   <!-- Action buttons -->
-  <circle cx="165" cy="225" r="12" fill="#ff6b9d"/>
-  <circle cx="200" cy="225" r="12" fill="#6bcfff"/>
-  <circle cx="235" cy="225" r="12" fill="#7dff7d"/>
-  
-  <!-- Button labels -->
-  <text x="165" y="229" font-size="10" fill="#fff" text-anchor="middle" font-family="sans-serif">A</text>
-  <text x="200" y="229" font-size="10" fill="#fff" text-anchor="middle" font-family="sans-serif">B</text>
-  <text x="235" y="229" font-size="10" fill="#fff" text-anchor="middle" font-family="sans-serif">C</text>
-  
-  <!-- Bottom decoration - small hearts -->
-  <path d="M170 255 C170 250 165 248 162 252 C159 248 154 250 154 255 C154 262 162 268 162 268 C162 268 170 262 170 255" 
-        fill="#ff6b9d" opacity="0.6"/>
-  <path d="M240 255 C240 250 245 248 248 252 C251 248 256 250 256 255 C256 262 248 268 248 268 C248 268 240 262 240 255" 
-        fill="#c44569" opacity="0.6"/>
-  
-  <!-- Signal waves -->
-  <path d="M280 120 Q300 100 280 80" fill="none" stroke="#ff6b9d" stroke-width="2" opacity="0.5"/>
-  <path d="M290 125 Q320 95 290 65" fill="none" stroke="#ff6b9d" stroke-width="2" opacity="0.3"/>
-  <path d="M120 120 Q100 100 120 80" fill="none" stroke="#6bcfff" stroke-width="2" opacity="0.5"/>
-  <path d="M110 125 Q80 95 110 65" fill="none" stroke="#6bcfff" stroke-width="2" opacity="0.3"/>
+  <circle cx="172" cy="190" r="8" fill="#ff6b9d" fill-opacity="0.7"/>
+  <circle cx="200" cy="190" r="8" fill="#6bcfff" fill-opacity="0.7"/>
+  <circle cx="228" cy="190" r="8" fill="#7dff7d" fill-opacity="0.7"/>
+
+  <!-- Signal waves left -->
+  <g stroke="#6bcfff" stroke-width="1.2" fill="none" opacity="0.4">
+    <path d="M135 110 Q125 100 135 90"/>
+    <path d="M125 115 Q110 100 125 85"/>
+  </g>
+
+  <!-- Signal waves right -->
+  <g stroke="#ff6b9d" stroke-width="1.2" fill="none" opacity="0.4">
+    <path d="M265 110 Q275 100 265 90"/>
+    <path d="M275 115 Q290 100 275 85"/>
+  </g>
+
+  <!-- Corner brackets -->
+  <g stroke="#ff6b9d" stroke-opacity="0.3" stroke-width="1" fill="none">
+    <polyline points="20,20 20,32 32,32"/>
+    <polyline points="380,20 380,32 368,32"/>
+    <polyline points="20,220 20,208 32,208"/>
+    <polyline points="380,220 380,208 368,208"/>
+  </g>
+
+  <!-- Labels -->
+  <text x="20" y="16" font-family="'Courier New', monospace" font-size="9" fill="#ff6b9d" fill-opacity="0.5" letter-spacing="2">08 · LOVE REMOTE</text>
+  <text x="380" y="232" font-family="'Courier New', monospace" font-size="8" fill="#ff6b9d" fill-opacity="0.2" text-anchor="end">2026</text>
+
+  <!-- Flow arrows -->
+  <g font-family="'Courier New', monospace" font-size="6" fill="#00f0ff" fill-opacity="0.3">
+    <text x="100" y="120" text-anchor="middle">SCAN</text>
+    <line x1="115" y1="115" x2="135" y2="115" stroke="#00f0ff" stroke-opacity="0.2" stroke-width="0.8"/>
+    <polyline points="132,112 135,115 132,118" fill="none" stroke="#00f0ff" stroke-opacity="0.2" stroke-width="0.8"/>
+
+    <text x="300" y="120" text-anchor="middle">SEND</text>
+    <line x1="265" y1="115" x2="285" y2="115" stroke="#00f0ff" stroke-opacity="0.2" stroke-width="0.8"/>
+    <polyline points="268,112 265,115 268,118" fill="none" stroke="#00f0ff" stroke-opacity="0.2" stroke-width="0.8"/>
+  </g>
 </svg>

@@ -30,13 +30,13 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: '数字交互展厅 · Digital Interactive Showroom',
+  title: '数字媒体作品展厅 · Digital Interactive Showroom',
   description:
     '一个极客风格的交互式作品集。Three.js 粒子、3D 雷达图、终端模拟器、滚动驱动动画。展示全栈、Unity/AR、游戏与 AI 项目的真实工程能力。',
   keywords: ['作品集', 'Portfolio', 'Next.js', 'Three.js', '全栈', 'Unity', 'AR', 'AI'],
   authors: [{ name: 'Showroom Author' }],
   openGraph: {
-    title: '数字交互展厅',
+    title: '数字媒体作品展厅',
     description: '操作一个轻量级创意工具界面的瞬间。',
     type: 'website',
   },

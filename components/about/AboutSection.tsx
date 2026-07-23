@@ -6,11 +6,11 @@ import { projects } from '@/lib/projects';
 const HIGHLIGHTS = [
   {
     label: 'AI / 计算机视觉',
-    value: 'AICSS 二维图像空间重建 · Grounding DINO · SAM2 · Depth Anything V2',
+    value: 'AICSS 二维图像空间重建 · Grounding DINO · SAM2 · Depth Anything',
   },
   {
     label: '影像 / 导演',
-    value: '时间折叠(反乌托邦短片) · 推剪下的老街时光(纪录) · Seedance 2.0 / DaVinci',
+    value: '时间折叠(反乌托邦短片) · 推剪下的老街时光(纪录) · Seedance 2.0 / PR',
   },
   {
     label: '全栈 / 系统',
@@ -40,15 +40,16 @@ export default function AboutSection() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.4fr_1fr]">
           <div>
             <h2 className="font-display text-5xl font-bold leading-tight tracking-tightest md:text-7xl">
-              在<span className="gradient-text">视觉大模型</span>与<span className="gradient-text">影像</span>之间来回切换
+              在<span className="gradient-text">游戏制作</span>与<span className="gradient-text">AI影像</span>领域钻研的新人
             </h2>
             <p className="mt-8 text-lg leading-relaxed text-fg/85">
-              我是做
+              一位学习
               <span className="bg-amber/15 px-1.5 py-0.5 text-amber"> AI / 计算机视觉</span>、
-              <span className="bg-amber/15 px-1.5 py-0.5 text-amber">全栈</span>、
-              游戏与影像的独立工程师。最近两年在
+              <span className="bg-amber/15 px-1.5 py-0.5 text-amber">程序</span>、
+              <span className="bg-amber/15 px-1.5 py-0.5 text-amber">游戏</span>与
+              <span className="bg-amber/15 px-1.5 py-0.5 text-amber">影像</span>的学生。最近两年在
               <span className="bg-amber/15 px-1.5 py-0.5 text-amber"> AICSS</span>、
-              UE5 城市冒险、AR 增强阅读、纪录短片几个方向之间来回切换,擅长把视觉与工程拼到一起,做成可点击可演示的真实系统。
+              UE5 城市冒险、AR 增强阅读、纪录短片几个项目中多有感悟,擅长学习新知识并应用到实际项目中。
             </p>
 
             <p className="mt-4 text-lg leading-relaxed text-fg/85">

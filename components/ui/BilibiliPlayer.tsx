@@ -19,7 +19,6 @@ export default function BilibiliPlayer({ src, className = '' }: BilibiliPlayerPr
       allow="autoplay; fullscreen"
       scrolling="no"
       frameBorder="0"
-      framespacing="0"
       style={{ width: '100%', height: '100%', borderRadius: 'inherit' }}
     />
   );
