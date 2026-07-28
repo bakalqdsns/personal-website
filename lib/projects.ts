@@ -178,57 +178,72 @@ export const projects: Project[] = [
       '真实非虚构叙事',
     ],
   },
-
-
   {
-    slug: 'lims',
+    slug: 'love-remote',
     index: '04',
-    title: 'LIMS · 实验室信息管理系统',
-    subtitle: 'Full-stack laboratory information management system',
+    title: '恋爱遥控器 · Love Remote',
+    subtitle: 'Unity branching narrative game',
     summary:
-      '面向实验室业务流程的信息化管理平台，实现实验数据管理、用户权限控制和业务流程数字化。',
-    type: 'fullstack',
-    role: '系统架构与后端开发',
+      '一款以店长模拟为核心、C#与Lua混合开发的恋爱视觉小说游戏。玩家扮演店铺经营者，通过遥控器形态的UI与三位女主角互动，体验回合制剧情与好感度系统带来的沉浸式恋爱体验。',
+    type: 'game',
+    role: '合作开发',
     stack: [
-      { name: '.NET 8' },
-      { name: 'Vue 3' },
-      { name: 'Entity Framework Core' },
-      { name: 'SQLite' },
+      { name: 'Unity' },
+      { name: 'C#' },
+      { name: 'Lua' },
+      { name: 'Live2D' },
     ],
     status: 'complete',
     size: 'lg',
-    year: '2025',
+    year: '2026',
     cover: {
       type: 'image',
-      src: '/covers/lims.svg',
+      src: '/covers/love-remote.svg',
     },
     media: [
       {
-        type: 'image',
-        src: '/media/lims-1.jpg',
-        alt: 'LIMS系统界面',
+        type: 'wistia',
+        src: '2t5nyei9hf',
+        alt: '视频描述',
       },
       {
         type: 'image',
-        src: '/media/lims-2.jpg',
-        alt: '数据管理模块',
+        src: '/media/love-remote-1.jpg',
+        alt: '恋爱遥控器游戏界面',
+      },
+      {
+        type: 'image',
+        src: '/media/love-remote-2.jpg',
+        alt: '分支剧情系统',
+      },
+      {
+        type: 'image',
+        src: '/media/love-remote-3.jpg',
+        alt: '好感度系统界面',
+      },
+      {
+        type: 'image',
+        src: '/media/love-remote-4.jpg',
+        alt: '好感度系统界面',
       },
     ],
     challenges: [
-      '复杂业务数据模型设计',
-      '前后端接口架构设计',
-      '数据库关系与权限管理',
+      'C#底层框架与Lua业务逻辑的混合架构设计',
+      '回合制剧情引擎与配表驱动系统',
+      '遥控器形态UI的交互反馈实现',
+      '角色好感度与多结局数据追踪',
     ],
     links: {
-      github: 'https://github.com/bakalqdsns/lims-auth',
+      baiduPan: 'https://pan.baidu.com/s/1qIu8KiRj1C-oUHq9JWCfsg?pwd=uenx',
     },
     highlights: [
-      '.NET 8 企业级架构',
-      'Vue3 管理后台',
-      '完整业务闭环',
+      'C# + Lua 混合开发',
+      '回合制剧情引擎',
+      '好感度系统',
+      '多结局分支',
+      'Live2D 动态立绘',
     ],
   },
-
 
   {
     slug: 'ue-city-platform',
@@ -360,71 +375,54 @@ export const projects: Project[] = [
 
 
   {
-    slug: 'love-remote',
+    slug: 'lims',
     index: '08',
-    title: '恋爱遥控器 · Love Remote',
-    subtitle: 'Unity branching narrative game',
+    title: 'LIMS · 实验室信息管理系统',
+    subtitle: 'Full-stack laboratory information management system',
     summary:
-      '一款以店长模拟为核心、C#与Lua混合开发的恋爱视觉小说游戏。玩家扮演店铺经营者，通过遥控器形态的UI与三位女主角互动，体验回合制剧情与好感度系统带来的沉浸式恋爱体验。',
-    type: 'game',
-    role: '合作开发',
+      '面向实验室业务流程的信息化管理平台，实现实验数据管理、用户权限控制和业务流程数字化。',
+    type: 'fullstack',
+    role: '系统架构与后端开发',
     stack: [
-      { name: 'Unity' },
-      { name: 'C#' },
-      { name: 'Lua' },
-      { name: 'Live2D' },
+      { name: '.NET 8' },
+      { name: 'Vue 3' },
+      { name: 'Entity Framework Core' },
+      { name: 'SQLite' },
     ],
     status: 'complete',
     size: 'lg',
-    year: '2026',
+    year: '2025',
     cover: {
       type: 'image',
-      src: '/covers/love-remote.svg',
+      src: '/covers/lims.svg',
     },
     media: [
       {
-        type: 'wistia',
-        src: '2t5nyei9hf',
-        alt: '视频描述',
+        type: 'image',
+        src: '/media/lims-1.jpg',
+        alt: 'LIMS系统界面',
       },
       {
         type: 'image',
-        src: '/media/love-remote-1.jpg',
-        alt: '恋爱遥控器游戏界面',
-      },
-      {
-        type: 'image',
-        src: '/media/love-remote-2.jpg',
-        alt: '分支剧情系统',
-      },
-      {
-        type: 'image',
-        src: '/media/love-remote-3.jpg',
-        alt: '好感度系统界面',
-      },
-      {
-        type: 'image',
-        src: '/media/love-remote-4.jpg',
-        alt: '好感度系统界面',
+        src: '/media/lims-2.jpg',
+        alt: '数据管理模块',
       },
     ],
     challenges: [
-      'C#底层框架与Lua业务逻辑的混合架构设计',
-      '回合制剧情引擎与配表驱动系统',
-      '遥控器形态UI的交互反馈实现',
-      '角色好感度与多结局数据追踪',
+      '复杂业务数据模型设计',
+      '前后端接口架构设计',
+      '数据库关系与权限管理',
     ],
     links: {
-      baiduPan: 'https://pan.baidu.com/s/1qIu8KiRj1C-oUHq9JWCfsg?pwd=uenx',
+      github: 'https://github.com/bakalqdsns/lims-auth',
     },
     highlights: [
-      'C# + Lua 混合开发',
-      '回合制剧情引擎',
-      '好感度系统',
-      '多结局分支',
-      'Live2D 动态立绘',
+      '.NET 8 企业级架构',
+      'Vue3 管理后台',
+      '完整业务闭环',
     ],
   },
+
 
 
   {
