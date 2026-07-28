@@ -71,9 +71,13 @@ const AXES: AxisRule[] = [
   {
     key: 'film',
     label: '影像 / 导演',
-    stackMatch: ['Sony', 'DaVinci', 'Seedance'],
-    typeMatch: ['film'],
-    roleMatch: ['导演', '剪辑'],
+    // Matches: video production tools (case-insensitive substring).
+    // Specific enough to avoid false positives — 'Sony' alone is too generic.
+    stackMatch: ['After Effects', 'Premiere', 'Blender', 'Runway', 'Kling', 'Sora', 'Seedance', 'Vidu', 'AI Video'],
+    // AI视频生成类项目也归属影像轴（生成即创作）
+    typeMatch: ['film', 'ai'],
+    // 含导演 / 剪辑 / 创作职责的项目也计入
+    roleMatch: ['导演', '剪辑', 'AI生成'],
     fullCredit: 2,
   },
 ];
