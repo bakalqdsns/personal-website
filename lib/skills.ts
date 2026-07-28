@@ -174,9 +174,15 @@ function buildSkills(): Skill[] {
   const MIN_LEVEL = 0.4;
   const MAX_LEVEL = 0.95;
 
+  // Fixed levels for specific axes; others are dynamically scaled.
+  const FIXED: Record<string, number> = {
+    film: 0.91,
+    backend: 0.70,
+  };
+
   return raws.map(({ rule, raw, evidence }) => {
     const ratio = max === 0 ? MIN_LEVEL : raw / max;
-    const level = MIN_LEVEL + (MAX_LEVEL - MIN_LEVEL) * ratio;
+    const level = FIXED[rule.key] ?? MIN_LEVEL + (MAX_LEVEL - MIN_LEVEL) * ratio;
     return {
       key: rule.key,
       label: rule.label,
