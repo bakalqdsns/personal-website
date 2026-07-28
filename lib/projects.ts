@@ -121,7 +121,7 @@ export const projects: Project[] = [
     ],
     challenges: [
       '用 Seedance 2.0 构建完整反乌托邦世界观',
-      '在无传统工作流条件下保持影像视觉风格统一',
+      '使用工作流以保持影像视觉风格统一',
       '将抽象的"时间分层"概念转化为可感知的画面',
     ],
     links: {
@@ -130,7 +130,7 @@ export const projects: Project[] = [
     highlights: [
       '完整反乌托邦短片',
       '三层时间分配的社会隐喻',
-      'Seedance 2.0 · 无工作流制作',
+      'Seedance 2.0 · 工作流制作',
     ],
   },
 
